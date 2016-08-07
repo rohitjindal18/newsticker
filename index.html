@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>
+		JavaScript News Ticker
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var news = ["1. New updates have been made to javascript News Ticker! Check below for more details!" , "2.Further updates to JavaScript News Ticker are coming soon" , "3. Javascript News Ticker now has support for multiple tickers per page!" , "4.jQuery News Ticker now has support for right-to-left languages!"];
+		function loadnews() {
+			for(var i =0 ; i<news.length;i++){
+				var heading = document.createElement('h5');
+				heading.innerHTML =news[i];
+				document.getElementById('newsContainer').appendChild(heading);
+			}
+		}
+	</script>
+</head>
+<body onload="loadnews()">
+<div id="heading"><h2>Javascript News Ticker</h2></div>
+<div id="newsTicker"><div id="newsHeading"><h4>LATEST</h4></div><marquee onmouseover="this.stop();" onmouseout="this.start();" width="100%"><div id="newsContainer"></div></marquee></div>
+</body>
+</html>
